@@ -15,7 +15,9 @@ const  lng = document.querySelector('span[data-lng]').dataset.lng
 const map = L.map('mapid', options).setView([lat,lng], 16.5);
 
 // Create and add tileLayer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
 // Create Icon
 const icon = L.icon({

@@ -5,7 +5,8 @@ const map = L.map('mapid').setView([-23.632079, -46.7710137], 15);
 // Create and add tileLayer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     // Não duplica o mapa quando o zoom for aplicado
-    noWrap: true
+    noWrap: true,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 // Create Icon
