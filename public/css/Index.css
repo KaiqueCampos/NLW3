@@ -1,0 +1,55 @@
+#container{
+    height:100vh;
+    background: #000000;
+}
+
+.products-grid{
+    width: 90%;
+    margin: 4rem auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.6rem;
+    row-gap: 1.6rem;
+}
+
+.image_container{
+    margin: 0 auto;
+    width: 100%;
+    height: 50vh;
+    
+    overflow: hidden;
+
+}
+
+.image_container img{
+    width: 100%;
+    height: 100%;
+
+    transition: transform 300ms
+}
+
+.image_container img:hover{
+    transform: scale(1.05);
+}
+
+.product-info{
+    height: 15vh;
+    margin-top: 1rem;
+}
+
+.product-info h2{
+    color: black;
+}
+
+.product-info p{
+    margin: 0.5rem 1rem;
+    color: black;
+}
+
+
+
+
+
+
+

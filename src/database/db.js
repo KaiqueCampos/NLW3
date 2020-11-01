@@ -1,21 +1,30 @@
-const Database = require('sqlite-async')
+// Importar o Mysql
+var mysql = require('mysql');
+var fs = require('fs')
 
-// Cria o banco de dados caso não exita um
-function execute(db){
-   return db.exec(`
-        CREATE TABLE IF NOT EXISTS orphanages (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            lat TEXT,
-            lng TEXT,
-            name TEXT,
-            about TEXT,
-            whatsapp TEXT,
-            images TEXT,
-            instructions TEXT,
-            opening_hours TEXT,
-            open_on_weekends TEXT
-        );
-    `)
+// Estabelecer Conexão
+var con = mysql.createConnection({
+    host: "127.0.0.1",
+    user: "root",
+    password: "",
+    database: 'Miniatura'
+});
+
+// Selecionar tudo da tabela
+function loadDB(){
+    con.connect(function (err) {
+
+        if (err) throw err;
+        console.log("Connected!");
+        var sql = "SELECT * FROM products";
+        con.query(sql, function (err, result) {
+            if (err) throw err;
+    
+            var arr = result
+            let data = JSON.stringify(arr);
+            fs.writeFileSync('public/products.json', data)
+        });
+    });
 }
 
-module.exports = Database.open(__dirname + '/database.sqlite').then(execute)
+loadDB();
