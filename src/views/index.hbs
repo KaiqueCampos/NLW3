@@ -10,54 +10,32 @@
     <link rel="stylesheet" href="/css/Index.css">
     <link rel="stylesheet" href="/css/main.css">
 
-    <script src="/src/database/db.js">
-        window.addEventListener("load", function (event) {
-            loadDB();
-        });
-    </script>
-
-    <script type="text/javascript">
-        function render() {
-
-            fetch('products.json')
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-
-                    const tbody = document.getElementById('tbody')
-                    tbody.innerHTML = ''
-                    data.map(item => {
-                        const tr = document.createElement('tr')
-                        tr.innerHTML =
-                            '<tr>' + item.prod_id + '</tr>' +
-                            '<tr>' + item.prod_name + '</tr>'
-
-                        tbody.appendChild(tr)
-                    })
-                })
-        }
-
-        window.addEventListener('load', e => {
-            render();
-        })
-
-    </script>
-
 </head>
 
 
 
 <body style="color: black">
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-    </table>
+    
+    <div id="container">
+
+        <div class="products-container">
+            <div class="products-grid">
+                <div class="product">
+                    <div class="image_prod">
+                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
+                    </div>
+                    <div class="product-info">
+                        <h2>Name</h2>
+                        <p>Price</p>
+                    </div>
+                </div>                  
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="/scripts/index.js"></script>
 </body>
 
 </html>
