@@ -6,20 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Localize um Orfanato | Happy</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/Index.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/glider.css">
+
 
 </head>
 
-
-
 <body style="color: black">
-    
+
     <div id="container">
 
-        <div class="products-container">
-            <div class="products-grid">
+        {{!-- <div class="products-container">
+            <div id="products-flex">
                 <div class="product">
                     <div class="image_prod">
                         <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
@@ -28,14 +33,105 @@
                         <h2>Name</h2>
                         <p>Price</p>
                     </div>
-                </div>                  
+                </div>
+                <div class="product">
+                    <div class="image_prod">
+                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
+                    </div>
+                    <div class="product-info">
+                        <h2>Name</h2>
+                        <p>Price</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image_prod">
+                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
+                    </div>
+                    <div class="product-info">
+                        <h2>Name</h2>
+                        <p>Price</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image_prod">
+                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
+                    </div>
+                    <div class="product-info">
+                        <h2>Name</h2>
+                        <p>Price</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image_prod">
+                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
+                    </div>
+                    <div class="product-info">
+                        <h2>Name</h2>
+                        <p>Price</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image_prod">
+                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
+                    </div>
+                    <div class="product-info">
+                        <h2>Name</h2>
+                        <p>Price</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image_prod">
+                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
+                    </div>
+                    <div class="product-info">
+                        <h2>Name</h2>
+                        <p>Price</p>
+                    </div>
+                </div>
             </div>
+
+            
+            <button class="prev"><i class="fa fa-chevron-left" aria-hidden="true" onclick="Prev(event)"></i></button>
+            <button class="next"><i class="fa fa-chevron-right" aria-hidden="true" onclick="Next(event)"></i></button>
+        </div> --}}
+
+        <!-- Products Carousel -->
+        <div class="products-container">
+
+            <div class="c-carousel__slides js-carousel--responsive">
+
+                <script type='text/x-handlebars-template'>
+                    {{#each cars}}
+                     <div class="c-carousel__slide">
+                        <div class="image_prod">
+                            <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
+                        </div>
+                        <div class="product-info">
+                            <h2>{{prod_name}}</h2>
+                            <p>{{prod_id}}</p>
+                        </div>
+                    </div>
+                    {{/each}}
+              </script>
+
+            </div>
+
+            <button class="js-carousel--responsive-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <button class="js-carousel--responsive-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+
         </div>
+
+
 
     </div>
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="/scripts/glider.js"></script>
     <script src="/scripts/index.js"></script>
+
+
 </body>
 
 </html>
