@@ -4,116 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Localize um Orfanato | Happy</title>
+    <title>Home | MiniStore</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;0,900;1,600&display=swap"
+        rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
     <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/Index.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/glider.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/Index.css">
+    <link rel="stylesheet" href="css/glider.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/menu.css">
+
 
 
 </head>
 
-<body style="color: black">
+<body id='body'>
+
+    <!-- Menu -->
+    <nav>
+        <button id="menu-btn-1" class="menu-btn">Produtos</button>
+        <button id="menu-btn-2" class="menu-btn">Coleções</button>
+        <div class="div-logo-img"><img src="/images/logo.png"></div>
+        <button id="menu-btn-3" class="menu-btn">Quem Somos</button>
+        <button id="menu-btn-4" class="menu-btn">Contato</button>
+    </nav>
 
     <div id="container">
-
-        {{!-- <div class="products-container">
-            <div id="products-flex">
-                <div class="product">
-                    <div class="image_prod">
-                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
-                    </div>
-                    <div class="product-info">
-                        <h2>Name</h2>
-                        <p>Price</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="image_prod">
-                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
-                    </div>
-                    <div class="product-info">
-                        <h2>Name</h2>
-                        <p>Price</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="image_prod">
-                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
-                    </div>
-                    <div class="product-info">
-                        <h2>Name</h2>
-                        <p>Price</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="image_prod">
-                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
-                    </div>
-                    <div class="product-info">
-                        <h2>Name</h2>
-                        <p>Price</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="image_prod">
-                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
-                    </div>
-                    <div class="product-info">
-                        <h2>Name</h2>
-                        <p>Price</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="image_prod">
-                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
-                    </div>
-                    <div class="product-info">
-                        <h2>Name</h2>
-                        <p>Price</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="image_prod">
-                        <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
-                    </div>
-                    <div class="product-info">
-                        <h2>Name</h2>
-                        <p>Price</p>
-                    </div>
-                </div>
-            </div>
-
-            
-            <button class="prev"><i class="fa fa-chevron-left" aria-hidden="true" onclick="Prev(event)"></i></button>
-            <button class="next"><i class="fa fa-chevron-right" aria-hidden="true" onclick="Next(event)"></i></button>
-        </div> --}}
+        <!-- Banner Fast and Furious -->
+        <div class="banner-container animate-up">
+            <img src="/images/FastFurious.png">
+            <button class="btn-FastFurious">Ver Coleção</button>
+        </div>
 
         <!-- Products Carousel -->
         <div class="products-container">
 
-            <div class="c-carousel__slides js-carousel--responsive">
+            <h1> Miniaturas Mais Vendidas </h1>
 
-                <script type='text/x-handlebars-template'>
-                    {{#each cars}}
-                     <div class="c-carousel__slide">
+            <div class="c-carousel__slides js-carousel--responsive animate-up">
+                {{#each miniatura}}
+                <div class="c-carousel__slide">
+                    <div class="product">
                         <div class="image_prod">
-                            <img src="images/Bryan-Skyline.jpg" alt="Image-Name">
+                            <img src={{this.prod_image}} alt="Image-Name">
                         </div>
                         <div class="product-info">
-                            <h2>{{prod_name}}</h2>
-                            <p>{{prod_id}}</p>
+                            <h3>{{this.prod_name}}</h3>
+                            <p>R${{this.prod_price}}</p>
                         </div>
                     </div>
-                    {{/each}}
-              </script>
-
+                </div>
+                {{/each}}
             </div>
 
             <button class="js-carousel--responsive-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
@@ -121,10 +69,7 @@
 
         </div>
 
-
-
     </div>
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>

@@ -1,0 +1,36 @@
+.banner-container {
+    position: relative;
+    margin: 4rem auto;
+    overflow: hidden;
+    width: 90%;
+    height: 55vw;
+    box-shadow: 1rem 0.8rem 1rem rgba(0, 0, 0, 0.432);
+}
+
+.banner-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-FastFurious {
+    position: absolute;
+    right: 11vw;
+    top: 32%;
+
+    width: 14vw;
+    height: 3vw;
+
+
+    border-radius: 2rem;
+    background: black;
+
+    font: 600 clamp(1.5rem, 1vw, 3.6rem)/1 'Montserrat', sans-serif;
+    color: white;
+    cursor: pointer;
+    
+    transition: opacity 300ms;
+}
+
+.btn-FastFurious:hover{
+    opacity: 80%;
+}

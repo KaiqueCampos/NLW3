@@ -7,7 +7,7 @@
 body{
     height: 100vh;
     color: #ffffff;
-    background: #ebf2f5;
+    background: #f3f3f3;
 }
 
 :root{
@@ -16,7 +16,14 @@ body{
 }
 
 body, input, button, textarea{
-    font: 400 1.8rem/1 'Nunito', sans-serif;
+    font: 400 1.8rem/1 'Montserrat', sans-serif;
+}
+
+#container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
 }
 
 

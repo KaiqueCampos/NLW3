@@ -14,7 +14,6 @@ module.exports = {
 
     // Renderiza a página
     index(req, res) {
-
         con.connect(function (err) {
 
             if (err) throw err;
@@ -26,9 +25,10 @@ module.exports = {
                 var arr = result
                 let data = JSON.stringify(arr);
                 fs.writeFileSync('public/products.json', data)
+
+                return res.render('index', {miniatura: result})
+                
             });
         });
-
-        return res.render('index')
     },
 }

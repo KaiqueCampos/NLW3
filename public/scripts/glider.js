@@ -1,8 +1,7 @@
-const $responsiveCarousel = document.querySelector(".js-carousel--responsive");
+const responsiveCarousel = document.querySelector(".js-carousel--responsive");
 
-new Glider($responsiveCarousel, {
-    slidesToShow: 3,
-    slidesToScroll: 1,
+new Glider(responsiveCarousel, {
+    infinite: false,
     draggable: false,
     arrows: {
         prev: ".js-carousel--responsive-prev",
@@ -10,10 +9,12 @@ new Glider($responsiveCarousel, {
     },
     responsive: [
         {
-            breakpoint: 600,
+            breakpoint: 550,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
+                duration: 1.5
+
             },
         },
         {
@@ -21,7 +22,9 @@ new Glider($responsiveCarousel, {
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
+                duration: 1.5
             },
         },
     ],
 });
+

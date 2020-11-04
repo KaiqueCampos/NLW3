@@ -1,24 +1,22 @@
-#container {
-    height: 100vh;
+/* Slider CSS */
+.products-container {
+    margin-top: 5rem;
+    height: 57rem;
 }
-#products-flex {
-    width: 85%;
-    margin: 4rem auto;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    background: crimson;
+
+.products-container h1 {
+    color: #000000;
+    margin: 0 0 1rem 8vw;
 }
 
 .product {
-    margin: 1rem;
-    width: 40vh;
+    width: 100%;
     flex: 0 0 51.85rem;
 }
 
 .image_prod {
     width: 100%;
-    height: 50vh;
+    height: clamp(25vh, 40vh, 500px);
     overflow: hidden;
 }
 
@@ -33,16 +31,17 @@
 }
 
 .product-info {
-    height: 15vh;
+    height: 13vh;
     margin-top: 1rem;
 }
 
-.product-info h2 {
+.product-info h3 {
+    margin: 0 2rem;
     color: black;
 }
 
 .product-info p {
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 2.5rem;
     color: black;
 }
 
