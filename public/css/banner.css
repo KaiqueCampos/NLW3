@@ -2,8 +2,8 @@
     position: relative;
     margin: 4rem auto;
     overflow: hidden;
-    width: 90%;
-    height: 55vw;
+    width: 93%;
+    height: 50vw;
     box-shadow: 1rem 0.8rem 1rem rgba(0, 0, 0, 0.432);
 }
 
@@ -12,15 +12,18 @@
     height: 100%;
 }
 
-.btn-FastFurious {
+.btn-Banner {
     position: absolute;
-    right: 11vw;
-    top: 32%;
+    /*right: 11.4vw;
+    top: 32%;*/
+    right: 2vw;
+    bottom: 2vw;
+    z-index: 100;
 
     width: 14vw;
     height: 3vw;
 
-
+    border: none;
     border-radius: 2rem;
     background: black;
 
@@ -31,6 +34,12 @@
     transition: opacity 300ms;
 }
 
-.btn-FastFurious:hover{
+.btn-Banner:hover{
     opacity: 80%;
+}
+
+/* Most Wanted */
+#btn-MostWanted{
+    background: #ffffff;
+    color: #000000;
 }

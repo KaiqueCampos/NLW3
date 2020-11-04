@@ -22,11 +22,12 @@ module.exports = {
             con.query(sql, function (err, result) {
                 if (err) throw err;
 
-                var arr = result
-                let data = JSON.stringify(arr);
-                fs.writeFileSync('public/products.json', data)
 
-                return res.render('index', {miniatura: result})
+                let fastFurious = result.filter((cod) => {
+                    return cod.prod_colection === 'Fast and Furious';
+                })
+
+                return res.render('index', {miniatura: result, fast: fastFurious})
                 
             });
         });

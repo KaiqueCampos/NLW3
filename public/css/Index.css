@@ -1,7 +1,6 @@
 /* Slider CSS */
 .products-container {
     margin-top: 5rem;
-    height: 57rem;
 }
 
 .products-container h1 {
@@ -16,7 +15,7 @@
 
 .image_prod {
     width: 100%;
-    height: clamp(25vh, 40vh, 500px);
+    height: 20vw;
     overflow: hidden;
 }
 

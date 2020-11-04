@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/glider.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/Footer.css">
 
 
 
@@ -31,7 +32,7 @@
     <nav>
         <button id="menu-btn-1" class="menu-btn">Produtos</button>
         <button id="menu-btn-2" class="menu-btn">Coleções</button>
-        <div class="div-logo-img"><img src="/images/logo.png"></div>
+        <div class="div-logo-img"><img src="/images/logo2.png"></div>
         <button id="menu-btn-3" class="menu-btn">Quem Somos</button>
         <button id="menu-btn-4" class="menu-btn">Contato</button>
     </nav>
@@ -40,7 +41,7 @@
         <!-- Banner Fast and Furious -->
         <div class="banner-container animate-up">
             <img src="/images/FastFurious.png">
-            <button class="btn-FastFurious">Ver Coleção</button>
+            <button id="btn-FastFurious" class="btn-Banner">Ver Coleção</button>
         </div>
 
         <!-- Products Carousel -->
@@ -64,10 +65,219 @@
                 {{/each}}
             </div>
 
-            <button class="js-carousel--responsive-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-            <button class="js-carousel--responsive-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            <button id="btn-glider-prev" class="js-carousel--responsive-prev"><i class="fa fa-chevron-left"
+                    aria-hidden="true"></i></button>
+            <button id="btn-glider-next" class="js-carousel--responsive-next"><i class="fa fa-chevron-right"
+                    aria-hidden="true"></i></button>
 
         </div>
+
+        <!-- Banner MostWanted -->
+        <div class="banner-container animate-up">
+            <img src="/images/MostWanted.png">
+            <button id="btn-MostWanted" class="btn-Banner">Obter Edição Limitada</button>
+        </div>
+
+
+        <!-- Fast Furious -->
+        <div class="products-container">
+
+            <h1> Coleção Velozes e Furiosos </h1>
+
+            <div class="c-carousel__slides js-carousel--responsive2 animate-up">
+                {{#each fast}}
+                <div class="c-carousel__slide">
+                    <div class="product">
+                        <div class="image_prod">
+                            <img src={{this.prod_image}} alt="Image-Name">
+                        </div>
+                        <div class="product-info">
+                            <h3>{{this.prod_name}}</h3>
+                            <p>R${{this.prod_price}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+            <button id="btn-glider-prev" class="js-carousel--responsive-prev2"><i class="fa fa-chevron-left"
+                    aria-hidden="true"></i></button>
+            <button id="btn-glider-next" class="js-carousel--responsive-next2"><i class="fa fa-chevron-right"
+                    aria-hidden="true"></i></button>
+
+        </div>
+
+        <!-- Banner Maqueen -->
+        <div class="banner-container animate-up">
+            <img src="/images/Maquuen.png">
+            <button id="btn-Maqueen" class="btn-Banner">Obter Edição Limitada</button>
+        </div>
+
+        <!-- Fast Furious -->
+        <div class="products-container">
+
+            <h1> Edições Limitadas </h1>
+
+            <div class="c-carousel__slides js-carousel--responsive3 animate-up">
+                {{#each fast}}
+                <div class="c-carousel__slide">
+                    <div class="product">
+                        <div class="image_prod">
+                            <img src={{this.prod_image}} alt="Image-Name">
+                        </div>
+                        <div class="product-info">
+                            <h3>{{this.prod_name}}</h3>
+                            <p>R${{this.prod_price}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+            <button id="btn-glider-prev" class="js-carousel--responsive-prev3"><i class="fa fa-chevron-left"
+                    aria-hidden="true"></i></button>
+            <button id="btn-glider-next" class="js-carousel--responsive-next3"><i class="fa fa-chevron-right"
+                    aria-hidden="true"></i></button>
+        </div>
+
+        <div class="offer">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/NavBar/Logo-NavBar.png" class="offer-img">
+                    </div>
+                    <div class="col-2">
+                        <p>Exclusivo da kakaluluphe store</p>
+                        <h1>Kakaluluphe</h1>
+                        <small>A Kakaluluphe foi criada no ano de 2020 com o intuito de revolucinar o mercado.
+                            A empresa conta com um design estiloso e feito pare quem ama roupas e tenis
+                            .</small>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--comments-->
+        <div class="testimonial">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p>Minha experiência com Kakaluluphe foi incrivel
+                            estou impressionada com a qualidade das peças e produtos
+                            .</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="images/NavBar/Billi2.jpg">
+                        <h3>Billie Elish</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p> Estou supreso com a loja e dedicação de seus criadores
+                            a partir de hoje ela é a minha favorita.</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="images/NavBar/Fausto.png">
+                        <h3>Fausto Silva</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p> Uma das melhores lojas no mercado, com toda certeza
+                            Recomendo e indico para todos
+                            porttit.</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="images/NavBar/Neyney.png">
+                        <h3>Neymar</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- marcas -->
+        <div class="brands">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-5">
+                        <img src="images/NavBar/jordanred.jpg">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/NavBar/adidas.png">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/NavBar/Bape8.jpg">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/NavBar/Logo_N.jpg">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/NavBar/Logotommy.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Faça o Download do Nosso App</h3>
+                        <p>Disponivel em aparelhos Apple e Android.</p>
+                        <div class="app-logo">
+                            <img src="images/NavBar/Logoapp.png"> <!-- playstore -->
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/NavBar/Logo-NavBar.png" style="margin-left: 30px;">
+                        <!--logo-->
+                        <p>Temos como proposito construir uma marca de renome.
+                            e ser a melhor para nossos clientes </p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Links Uteis</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Nos siga</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright@2020 - Kakaluluphe</p>
+            </div>
+        </div>
+
+
+
+
 
     </div>
 

@@ -4,7 +4,6 @@
 
 .c-carousel__slides {
     width: 84%;
-    height: 68vh;
 }
 
 .c-carousel__slide {
@@ -13,9 +12,9 @@
     height: 68vh;
 }
 
-.js-carousel--responsive-prev {
+#btn-glider-prev {
     position: absolute;
-    left: 8.5rem;
+    left: 3.7vw;
     bottom: 55%;
     background: #000000;
     color: #ffffff;
@@ -28,13 +27,13 @@
     transition: opacity 300ms;
 }
 
-.js-carousel--responsive-prev:hover {
+#btn-glider-prev:hover {
     opacity: 80%;
 }
 
-.js-carousel--responsive-next {
+#btn-glider-next {
     position: absolute;
-    right: 8.5rem;
+    right: 3.7vw;
     bottom: 55%;
     background: #000000;
     color: #ffffff;
@@ -47,6 +46,6 @@
     transition: opacity 300ms;
 }
 
-.js-carousel--responsive-next:hover {
+#btn-glider-next:hover {
     opacity: 80%;
 }
