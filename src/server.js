@@ -19,6 +19,8 @@ server
 
 // Seleção das rotas
 .get('/', pages.index)
+.get('/produtos', pages.produtos)
+
 
 
 // Ligar o server

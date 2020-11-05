@@ -41,11 +41,11 @@ nav {
     box-shadow: 1rem 0.8rem 1rem rgba(0, 0, 0, 0.432);
 }
 
-.menu-btn:first-child {
+#menu-btn-1 {
     border-radius: 2rem 0.5rem 0.5rem 2rem;
 }
 
-.menu-btn:last-child {
+#menu-btn-4{
     border-radius: 0.5rem 2rem 2rem 0.5rem;
 }
 
