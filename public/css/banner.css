@@ -43,3 +43,28 @@
     background: #ffffff;
     color: #000000;
 }
+
+.grid-banner{
+    margin: 0 auto;
+    width: 93%;
+    height: 65vw;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.small-banner{
+    background: red;
+    box-shadow: 1rem 0.8rem 1rem rgba(0, 0, 0, 0.432);
+
+    position: relative;
+}
+
+.small-banner img{
+    height: 100%;
+    width: 100%;
+}
