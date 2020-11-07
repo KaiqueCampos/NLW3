@@ -1,16 +1,5 @@
-// Importar o Mysql
+// Importar o Banco de dados
 const Database = require('./database/db');
-//var mysql = require('mysql');
-
-// // Estabelecer Conexão
-// var con = mysql.createConnection({
-//     host: "127.0.0.1",
-//     user: "root",
-//     password: "",
-//     database: 'Miniatura'
-// });
-
-
 
 module.exports = {
 
@@ -32,28 +21,14 @@ module.exports = {
             console.log(error)
             return res.send("Erro no banco de dados!")
         }
-
-
-        // con.connect(function (err) {
-
-        //     if (err) throw err;
-
-        //     var sql = "SELECT * FROM products";
-        //     con.query(sql, function (err, result) {
-        //         if (err) throw err;
-
-
-        //         let fastFurious = result.filter((cod) => {
-        //             return cod.prod_colection === 'Fast and Furious';
-        //         })
-
-        //         return res.render('index', { miniatura: result, fast: fastFurious })
-
-        //     });
-        // });
     },
 
-    produtos(req, res) {
-        return res.render('produtos')
+    async produtos(req, res) {
+
+        // Seleciona todos os Produtos
+        const db = await Database;
+        const miniatura = await db.all("SELECT * FROM products")
+
+        return res.render('produtos', {miniatura})
     }
 }

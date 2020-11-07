@@ -13,22 +13,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/banner.css">
-    <link rel="stylesheet" href="css/Index.css">
-    <link rel="stylesheet" href="css/glider.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/produtos.css">
     <link rel="stylesheet" href="css/Footer.css">
+
+
 
 </head>
 
 <body id='body'>
 
     <!-- Menu -->
-    <nav>
+    <nav class="animate-up">
         <a href="/produtos"><button id="menu-btn-1" class="menu-btn">Produtos</button></a>
         <button id="menu-btn-2" class="menu-btn">Coleções</button>
         <a href="/">
@@ -42,11 +41,35 @@
 
     <div id="container">
 
-        <!-- Produtos -->
+        <nav id="search-nav">
+            <div>
+                <input type="text" id="edit_search" onkeyup="findProduct();">
+                <button class="search-btn"><img src="images/SearchBTN.png"></button>
+            </div>
+        </nav>
 
+
+        <!-- Produtos -->
+        <div class="products-container">
+            {{#each miniatura}}
+            <div class="product animate-up">
+                <div class="image_prod">
+                    <img src={{this.prod_image}} alt="Image-Name">
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3 class="prod_name">{{this.prod_name}}</h3>
+                        <small>{{this.prod_name}}</small>
+                    </div>
+                    <p>R${{this.prod_price}}</p>
+                </div>
+                <button class="buy">Comprar</button>
+            </div>
+            {{/each}}
+        </div>
 
         <!-- footer -->
-        <div class="footer">
+        <div class="footer animate-up">
 
             <div class="footer-title">
                 <img src="images/logo2.png">
@@ -90,51 +113,15 @@
             <hr>
             <p class="copyright">Copyright@2020 - MiniStore</p>
         </div>
+
+
     </div>
 
 
 
 
-        {{!-- <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col-1">
-                        <h3>Faça o Download do Nosso App</h3>
-                        <p>Disponivel em aparelhos Apple e Android.</p>
-                        <div class="app-logo">
-                            <img src="images/NavBar/Logoapp.png"> <!-- playstore -->
-                        </div>
-                    </div>
-                    <div class="footer-col-2">
-                        <img src="images/NavBar/Logo-NavBar.png" style="margin-left: 30px;">
-                        <!--logo-->
-                        <p>Temos como proposito construir uma marca de renome.
-                            e ser a melhor para nossos clientes </p>
-                    </div>
-                    <div class="footer-col-3">
-                        <h3>Links Uteis</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>Blog Post</li>
-                            <li>Return Policy</li>
-                            <li>Join Affiliate</li>
-                        </ul>
-                    </div>
-                    <div class="footer-col-4">
-                        <h3>Nos siga</h3>
-                        <ul>
-                            <li>Facebook</li>
-                            <li>Twitter</li>
-                            <li>Instagram</li>
-                            <li>Youtube</li>
-                        </ul>
-                    </div>
-                </div>
-                <hr>
-                <p class="copyright">Copyright@2020 - MiniStore</p>
-            </div>
-        </div> --}}
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="scripts/produtos.js"></script>
 
 </body>
 

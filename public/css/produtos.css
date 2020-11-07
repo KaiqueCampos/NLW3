@@ -1,0 +1,116 @@
+.products-container {
+    margin: 4rem auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
+}
+
+.product {
+    width: 100%;
+    background: rgb(216, 216, 216);
+    border-radius: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.image_prod {
+    margin: 1.5rem auto;
+    overflow: hidden;
+    width: 95%;
+    height: 20vw;
+    border-radius: 3rem;
+}
+
+.image_prod img {
+    height: 100%;
+    width: 100%;
+    transition: transform 300ms;
+    cursor: pointer;
+}
+
+.image_prod img:hover {
+    transform: scale(1.03);
+}
+
+.product-info {
+    margin: 0 auto;
+    width: 92%;
+    height: 6vw;
+    color: black;
+}
+
+.product-info h3 {
+    font-size: 1.2vw;
+}
+
+.product-info p {
+    font-size: 1vw;
+    margin-top: 0.7rem;
+}
+
+.product-info div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-info div small {
+    font-size: 0.8vw;
+    margin: initial;
+}
+
+.buy {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0.1px;
+    width: 100%;
+    height: 2.7vw;
+    color: white;
+    font: 700 1vw/1 'Montserrat', sans-serif;
+    background: black;
+    border: none;
+    cursor: pointer;
+    transition: opacity 300ms;
+}
+
+.buy:hover {
+    opacity: 70%;
+}
+
+.active {
+    visibility: visible;
+}
+
+/* Serch Button */
+
+#search-nav{
+    background: red;
+    padding: 1rem;
+}
+
+#search-nav div{
+    background: greenyellow;
+}
+
+.search-btn{
+    width: 2.5vw;
+    height: 2.5vw;
+
+    overflow: hidden;
+    border: none;
+    border-radius: 50%;
+}
+
+.search-btn img{
+    width: 100%;
+    height: 100%;
+}
+
+#edit_search{
+    width: 20vw;
+    height: 2.5vw;
+
+    border-radius: 2rem;
+}
