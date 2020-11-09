@@ -43,7 +43,9 @@
         <!-- Banner Fast and Furious -->
         <div class="banner-container animate-up">
             <img src="/images/FastFurious.png">
+
             <button id="btn-FastFurious" class="btn-Banner">Ver Coleção</button>
+
         </div>
 
         <!-- Products Carousel -->
@@ -55,9 +57,11 @@
                 {{#each miniatura}}
                 <div class="c-carousel__slide">
                     <div class="product">
-                        <div class="image_prod">
-                            <img src={{this.prod_image}} alt="Image-Name">
-                        </div>
+                        <a href="/produto?prod_id={{this.prod_id}}">
+                            <div class="image_prod">
+                                <img src={{this.prod_image}} alt="Image-Name">
+                            </div>
+                        </a>
                         <div class="product-info">
                             <h3>{{this.prod_name}}</h3>
                             <p>R${{this.prod_price}}</p>

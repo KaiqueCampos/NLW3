@@ -1,5 +1,5 @@
 .products-container {
-    margin: 4rem auto;
+    margin: 2rem auto;
     width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -85,32 +85,43 @@
 
 /* Serch Button */
 
-#search-nav{
-    background: red;
-    padding: 1rem;
+#search-nav {
+    width: 80%;
+    height: 2vw;
+    margin-top: 3.5vw;
+    position: relative;
+    border-radius: 2rem;
 }
 
-#search-nav div{
-    background: greenyellow;
+.search-container {
+    position: absolute;
+    right: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.search-btn{
+.search-img {
+    margin-left: 0.7vw;
     width: 2.5vw;
     height: 2.5vw;
-
     overflow: hidden;
     border: none;
     border-radius: 50%;
+    background: blue;
 }
 
-.search-btn img{
+.search-img img {
     width: 100%;
     height: 100%;
 }
 
-#edit_search{
-    width: 20vw;
+#edit_search {
+    width: 19vw;
     height: 2.5vw;
-
     border-radius: 2rem;
+
+    font-weight: 600;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }

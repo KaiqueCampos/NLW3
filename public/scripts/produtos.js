@@ -17,7 +17,7 @@ function gid(a_id) {
 
 // Deixa o display none quando inserido caracteres no input
 function close_all() {
-    
+
     var o = gid(".product");
     for (i = 0; i < o.length; i++) {
         if (o) {
@@ -29,16 +29,19 @@ function close_all() {
 // Encontra o produto
 function findProduct() {
     close_all();
-    
+
     // Texto inserido no input
     var o_edit = gid("#edit_search");
     var str_needle = edit_search.value;
     str_needle = str_needle.toUpperCase();
     var searchStrings = str_needle.split(/\W/);
-    
+
     // Seleciona todos os produtos em um lopping
     var nameDivs = document.querySelectorAll(".product");
+   
+
     for (var j = 0, divsLen = nameDivs.length; j < divsLen; j++) {
+   
 
         // Contador 
         var num = 0;
@@ -57,11 +60,12 @@ function findProduct() {
                 // Display visivel apenas para produtos encontrados
                 if (num == searchStrings.length) {
                     nameDivs[j].style.display = "block";
-                }   
+                }
             }
 
             // Caso esteja vazio, mostra todos os produtos
-            else{
+            else {
+
                 var o = gid(".product");
                 for (i = 0; i < o.length; i++) {
                     if (o) {

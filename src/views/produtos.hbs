@@ -41,10 +41,10 @@
 
     <div id="container">
 
-        <nav id="search-nav">
-            <div>
+        <nav id="search-nav" class="animate-up">
+            <div class="search-container">
                 <input type="text" id="edit_search" onkeyup="findProduct();">
-                <button class="search-btn"><img src="images/SearchBTN.png"></button>
+                <div class="search-img"><img src="images/SearchBTN.png"></div>
             </div>
         </nav>
 
@@ -53,9 +53,12 @@
         <div class="products-container">
             {{#each miniatura}}
             <div class="product animate-up">
-                <div class="image_prod">
-                    <img src={{this.prod_image}} alt="Image-Name">
-                </div>
+                <a href="/produto?prod_id={{this.prod_id}}">
+                    <div class="image_prod">
+                        <img src={{this.prod_image}} alt="Image-Name">
+                    </div>
+                </a>
+
                 <div class="product-info">
                     <div>
                         <h3 class="prod_name">{{this.prod_name}}</h3>
@@ -63,7 +66,7 @@
                     </div>
                     <p>R${{this.prod_price}}</p>
                 </div>
-                <button class="buy">Comprar</button>
+                <button class="buy">Adicionar ao Carrinho</button>
             </div>
             {{/each}}
         </div>
@@ -116,9 +119,6 @@
 
 
     </div>
-
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="scripts/produtos.js"></script>

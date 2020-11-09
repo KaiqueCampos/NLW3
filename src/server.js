@@ -20,6 +20,7 @@ server
 // Seleção das rotas
 .get('/', pages.index)
 .get('/produtos', pages.produtos)
+.get('/produto', pages.produto)
 
 
 

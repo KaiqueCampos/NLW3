@@ -29,6 +29,21 @@ module.exports = {
         const db = await Database;
         const miniatura = await db.all("SELECT * FROM products")
 
+    console.log(miniatura)
+
         return res.render('produtos', {miniatura})
+    },
+
+    async produto(req, res){
+        const id = req.query.prod_id
+        console.log(id)
+
+        const db = await Database;
+        const results = await db.all(`SELECT * FROM products WHERE prod_id =${id}`)
+        const miniatura = results[0]
+        miniatura.parcelas = miniatura.prod_price /10
+
+        return res.render('produto', {miniatura})
+    
     }
 }

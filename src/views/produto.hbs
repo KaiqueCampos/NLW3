@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | MiniStore</title>
+
+    <!-- Fonts/Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;0,900;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/produto.css">
+
+
+
+</head>
+
+<body id='body'>
+
+    <!-- Container Principal -->
+    <div id="container">
+
+        <div class="product-container animate-up">
+            <div class="product-images">
+                <div class="first-image">
+                    <img src="{{miniatura.prod_image}}">
+                </div>
+                <div class="other-imgs">
+                    <button class="btn-img active" onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
+                    <button class="btn-img"  onclick="selectImage(event)"><img src="https://www.orangeboxminiaturas.com.br/img/products/suki-s-honda-s2000-2001-pink-fast-and-furious-velozes-e-furiosos-jada-toys-1-24-jad-97604_2_1000.jpg"></button>
+                    <button class="btn-img"  onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
+                    <button class="btn-img"  onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
+                    <button class="btn-img"  onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
+                    <button class="btn-img"  onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>{{miniatura.prod_name}}</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not
+                    only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                <div class="price-buy">
+                    <div class="prices">
+                        <h1>R$: {{miniatura.prod_price}}</h1>
+                        <h5>10x sem juros de R${{miniatura.parcelas}}</h5>
+
+                    </div>
+
+                    <button>Comprar Agora</button>
+                </div>
+
+                <a class="back" href="/produtos">
+                    <button class="btn-back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
+                </a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="scripts/produto.js"></script>
+
+</body>
+
+</html>
