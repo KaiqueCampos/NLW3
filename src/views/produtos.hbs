@@ -53,6 +53,7 @@
         <div class="products-container">
             {{#each miniatura}}
             <div class="product animate-up">
+
                 <a href="/produto?prod_id={{this.prod_id}}">
                     <div class="image_prod">
                         <img src={{this.prod_image}} alt="Image-Name">
@@ -66,7 +67,11 @@
                     </div>
                     <p>R${{this.prod_price}}</p>
                 </div>
-                <button class="buy">Adicionar ao Carrinho</button>
+
+                <a href="/cart?prod_id={{this.prod_id}}">
+                    <button class="buy">Adicionar ao Carrinho</button>
+                </a>
+
             </div>
             {{/each}}
         </div>
@@ -122,6 +127,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="scripts/produtos.js"></script>
+
 
 </body>
 

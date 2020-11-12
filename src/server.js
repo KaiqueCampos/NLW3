@@ -21,6 +21,8 @@ server
 .get('/', pages.index)
 .get('/produtos', pages.produtos)
 .get('/produto', pages.produto)
+.get('/cart', pages.cart)
+
 
 
 
