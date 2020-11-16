@@ -10,6 +10,12 @@ function execute(db) {
             prod_price decimal(6,2),
             prod_colection TEXT
         );
+
+        CREATE TABLE IF NOT EXISTS users (
+            user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_name TEXT,
+            user_password TEXT
+        );
     `)
 }
 
@@ -25,6 +31,20 @@ function execute(db) {
 //         "https://www.pontofrio-imagens.com.br/Control/ArquivoExibir.aspx?IdArquivo=1237587616",
 //         1500,
 //         'Fast and Furious'
+//     );
+// `);
+// }
+
+// function execute(db) {
+//     return db.run(`
+//     INSERT INTO users (
+//         user_id,
+//         user_name,
+//         user_password
+//     ) VALUES (
+//         1,
+//         'Kaique',
+//         "teste123"
 //     );
 // `);
 // }

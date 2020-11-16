@@ -111,9 +111,7 @@ function render() {
             document.querySelector(".image").innerHTML = products[0].Imagem
            
         };
-
     }
-
 }
 
 render();

@@ -10,7 +10,7 @@ Database.then(async db => {
     //console.log(await db.run("DELETE TABLE products"))
 
     // Consultar dados na tabela   
-    const selectedOrphanages = await db.all("SELECT * FROM products")
+    const selectedOrphanages = await db.all("SELECT * FROM users")
     console.log(selectedOrphanages)
 
 })
