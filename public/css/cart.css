@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    background: url("/images/Background.png");
 }
 
 .cart-container {
@@ -14,7 +15,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(214, 214, 214);
+    background: rgb(255, 255, 255);
+    box-shadow: 1rem 0.8rem 1rem rgba(0, 0, 0, 0.432);
+
 }
 
 .cart-container img {

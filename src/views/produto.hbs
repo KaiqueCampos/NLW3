@@ -32,12 +32,14 @@
                     <img src="{{miniatura.prod_image}}">
                 </div>
                 <div class="other-imgs">
-                    <button class="btn-img active" onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
-                    <button class="btn-img"  onclick="selectImage(event)"><img src="https://www.orangeboxminiaturas.com.br/img/products/suki-s-honda-s2000-2001-pink-fast-and-furious-velozes-e-furiosos-jada-toys-1-24-jad-97604_2_1000.jpg"></button>
-                    <button class="btn-img"  onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
-                    <button class="btn-img"  onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
-                    <button class="btn-img"  onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
-                    <button class="btn-img"  onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
+                    <button class="btn-img active" onclick="selectImage(event)"><img
+                            src="{{miniatura.prod_image}}"></button>
+                    <button class="btn-img" onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
+
+                    <button class="btn-img" onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
+                    <button class="btn-img" onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
+                    <button class="btn-img" onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
+                    <button class="btn-img" onclick="selectImage(event)"><img src="{{miniatura.prod_image}}"></button>
                 </div>
             </div>
             <div class="product-info">
@@ -58,8 +60,10 @@
                         <h5>10x sem juros de R${{miniatura.parcelas}}</h5>
 
                     </div>
+                    <a href="/cart?prod_id={{miniatura.prod_id}}">
+                        <button>Adicionar</button>
+                    </a>
 
-                    <button>Comprar Agora</button>
                 </div>
 
                 <a class="back" href="/produtos">

@@ -8,13 +8,24 @@ function execute(db) {
             prod_name TEXT,
             prod_image TEXT,
             prod_price decimal(6,2),
-            prod_colection TEXT
+            prod_colection TEXT,
+            prod_category TEXT
         );
 
         CREATE TABLE IF NOT EXISTS users (
             user_id INTEGER PRIMARY KEY AUTOINCREMENT,
             user_name TEXT,
-            user_password TEXT
+            user_password TEXT,
+            user_genre TEXT,
+            user_cpf TEXT,
+            user_rg TEXT,
+            user_email TEXT,
+            user_adress TEXT,
+            user_bairro TEXT,
+            user_number TEXT,
+            user_cep TEXT,
+            user_cidade TEXT,
+            user_uf TEXT
         );
     `)
 }

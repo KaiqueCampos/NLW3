@@ -1,14 +1,49 @@
 // Importar o Banco de dados
 const Database = require('./database/db');
-const fs = require('fs');
-const { fileURLToPath } = require('url');
+const registerUser = require('./database/registerUser');
 
 module.exports = {
 
 
     // Renderiza a página
-    async register(req, res){
+    async register(req, res) {
         return res.render('register')
+    },
+
+    async registerUser(req, res) {
+        const fields = req.body;
+
+        // Válidar se todos os campos estão preenchidos
+        if (Object.values(fields).includes('')) {
+            return res.send('Todos os campos devem ser preenchidos')
+        }
+
+        try {
+            // Salvar um usuário
+            const db = await Database;
+            await registerUser(db, {
+                name: fields.name,
+                password: fields.password,
+                genre: fields.genre,
+                cpf: fields.cpf,
+                rg: fields.rg,
+                email: fields.email,
+                adress: fields.adress,
+                bairro: fields.bairro,
+                number: fields.number,
+                cep: fields.cep,
+                cidade: fields.cidade,
+                uf: fields.uf
+            })
+
+            // Redirecionamento
+            return res.redirect('/')
+        }
+
+        catch {
+            console.log(error)
+            return res.send("Erro no Banco de Dados")
+        }
     },
 
     async login(req, res) {
@@ -19,7 +54,7 @@ module.exports = {
 
         try {
 
-            // Seleciona todos os orfanatos cadastrados e renderiza a página
+            // Selecion os produtos
             const db = await Database;
             const miniatura = await db.all("SELECT * FROM products")
             const fast = await db.all("SELECT * FROM products WHERE prod_colection = 'Fast and Furious'")
@@ -38,9 +73,9 @@ module.exports = {
         const db = await Database;
 
         if (req.method === 'POST') {
-            const results = await db.all(`SELECT * FROM users WHERE user_name = '${fields.name}' AND user_password = '${fields.password}'`)
+            const results = await db.all(`SELECT * FROM users WHERE user_email = '${fields.email}' AND user_password = '${fields.password}'`)
             if (results.length > 0) {
-                return res.redirect('/')
+                return res.redirect('/index')
             }
 
             else {
@@ -54,7 +89,7 @@ module.exports = {
         }
     },
 
-    async loginERROR(req, res){
+    async loginERROR(req, res) {
         res.render('loginERROR')
     },
 

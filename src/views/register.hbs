@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | MiniStore</title>
+
+    <!-- Fonts/Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;0,900;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/form.css">
+
+
+
+</head>
+
+<body id='body'>
+
+    <div id="container">
+
+        <div class="backLogin">
+            <img src="images/logo2.png">
+            <a href="/login"><button class="login">Voltar</button></a>
+        </div>
+
+        <form method="post" action="register-user">
+            <fieldset class="info">
+                <legend class="info-legend"> Registro de Usuário </legend>
+
+                <!-- Nome / Email  -->
+                <h3>Informações Pessoais </h3>
+                <input type="text" placeholder="Digite seu Email:" name="email" class="input-block space" required>
+                <input type="text" placeholder="Digite seu Nome:" name="name" class="input-block space" required>
+                <input type="text" placeholder="Digite sua Senha:" name="password" class="input-block space" required>
+                <input type="text" placeholder="Digite seu Gênero:" name="genre" class="input-block space" required>
+
+                <!-- cpf / rg -->
+                <h3>Documentos</h3>
+                <div class="inline">
+                    <input type="text" placeholder="Digite seu CPF:" name="cpf" class="input-block" required>
+                    <input type="text" placeholder="Digite seu RG:" name="rg" class="input-block" required>
+                </div>
+
+
+                <!-- Adress -->
+                <h3>Endereço</h3>
+                <input type="text" placeholder="Digite seu Endereço:" name="adress" class="input-block space" required>
+
+                <div class="inline">
+                    <input type="text" placeholder="Digite seu CEP:" name="cep" class="input-block" required>
+                    <input type="text" placeholder="Digite seu Número:" name="number" class="input-block" required>
+                </div>
+
+                <input type="text" placeholder="Digite seu Bairro:" name="bairro" class="input-block" required>
+
+                <!-- Estado -->
+                <h3>Cidade</h3>
+                <div class="inline">
+                    <input type="text" placeholder="Digite sua Cidade:" name="cidade" class="input-block" required>
+                    <input type="text" placeholder="Digite a UF da Cidade:" name="uf" class="input-block" required>
+                </div>
+
+                <button type="submit" class="register">Login</button>
+            </fieldset>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>

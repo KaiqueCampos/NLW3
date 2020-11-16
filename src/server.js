@@ -18,14 +18,16 @@ server
     .set('view engine', 'hbs')
 
     // Seleção das rotas
-    .get('/', pages.index)
+    .get('/index', pages.index)
     .get('/produtos', pages.produtos)
     .get('/produto', pages.produto)
     .get('/cart', pages.cart)
-    .get('/login', pages.login)
+    .get('/', pages.login)
     .get('/loginERROR', pages.loginERROR)
     .get('/register', pages.register)
     .post('/login-Validation', pages.loginValidation)
+    .post('/register-user', pages.registerUser)
+
 
 // Ligar o server
 server.listen(5500)

@@ -1,0 +1,113 @@
+#container {
+    width: 100%;
+    position: absolute;
+}
+
+.backLogin {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    padding: 2vw;
+    background: url("/images/Background.png") rgb(184, 184, 184);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.backLogin img {
+    width: 100%;
+    height: 6.5vw;
+}
+
+.login {
+    width: 15vw;
+    height: 3vw;
+    color: #ffffff;
+    background: black;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: opacity 300ms;
+}
+
+.login:hover {
+    opacity: 70%;
+}
+
+form {
+    position: absolute;
+    right: 0.1px;
+    width: 70%;
+    background: url("/images/Background.png") black;
+    background-size: 100% 100%;
+    border-radius: 3vw 0 0 3vw;
+    margin: 3vw 0 3vw 0;
+    padding: 4vw;
+    
+}
+
+.info {
+    background-size: 100% 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.info-legend {
+    font: 700 clamp(1rem, 3vw, 5rem)/1 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 2vw;
+}
+
+.input-block {
+    width: 80%;
+    height: 3.5vw;
+    border: none;
+    border-radius: 2vw;
+    padding: 1vw;
+    box-shadow: 0.7rem 0.5rem 0.7rem rgba(0, 0, 0, 0.432);
+}
+
+.space {
+    margin-top: 1vw;
+}
+
+.register{
+    margin-top: 2vw;
+    width: 80%;
+    height: 4vw;
+    color: black;
+    font-size: 1.3vw;
+    font-weight: 800;
+    background:rgb(75, 199, 106);
+    border: none;
+    border-radius: 2vw;
+    transition: opacity 300ms;
+    cursor: pointer;
+}
+
+.register:hover{
+    opacity: 70%;
+}
+
+.inline{
+    width: 80%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inline .input-block{
+    width: 49%;
+}
+
+h3{
+    color: #ffffff;
+    margin: 1vw 0 0 1vw;
+}

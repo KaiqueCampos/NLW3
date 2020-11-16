@@ -2,15 +2,15 @@ function addProduct() {
 
     let products = [];
 
-    /* Get Elements Values */
+    /* Pega o valor de cada elemento */
     const id = parseInt(document.querySelector(".id").textContent)
     const price = parseInt(document.querySelector(".prod_price").textContent)
     const quantidade = parseInt(document.querySelector(".quantidade").textContent)
     const image = document.querySelector(".image").textContent
     const name = document.querySelector(".name").textContent
-    // const colection = document.querySelector(".colection").textContent
+    const colection = document.querySelector(".colection").textContent
 
-    /*Set total*/
+    /*Adiciona o total*/
     const total = quantidade * price;
 
     //Pega os produtos que já estão no localStorage
@@ -22,7 +22,7 @@ function addProduct() {
 
     if (repeatProduct < 1) {
         //Adiciona novos produtos
-        products.push({ 'id': id, 'Nome': name, 'Price': price, 'Quantidade': quantidade, 'Total': total, 'Imagem': image });
+        products.push({ 'id': id, 'Nome': name, 'Price': price, 'Quantidade': quantidade, 'Total': total, 'Imagem': image , 'Colection' : colection});
         localStorage.setItem('products' + id, JSON.stringify(products));
     }
 
@@ -109,6 +109,7 @@ function render() {
             document.querySelector(".prod_price").innerHTML = products[0].Price
             const quantidade = parseInt(document.querySelector(".quantidade").textContent)
             document.querySelector(".image").innerHTML = products[0].Imagem
+            document.querySelector('.colection').innerHTML = products[0].Colection
            
         };
     }
