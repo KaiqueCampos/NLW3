@@ -35,6 +35,8 @@ function addMarker({id, name, lat, lng}) {
 
 // Para cada Orfanato mostra as informações
 const orphanagesSpan = document.querySelectorAll('.orphanages span')
+console.log(orphanagesSpan)
+
 orphanagesSpan.forEach(span => {
     const orphanage = {
         id: span.dataset.id,
@@ -42,6 +44,7 @@ orphanagesSpan.forEach(span => {
         lat: span.dataset.lat,
         lng: span.dataset.lng
     }
+    console.log(orphanage)
 
     addMarker(orphanage)
 })
