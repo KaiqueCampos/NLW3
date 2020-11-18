@@ -1,6 +1,8 @@
 // Importar o Banco de dados
 const Database = require('./database/db');
 const registerUser = require('./database/registerUser');
+const buyProduct = require('./database/buyProduct');
+
 
 module.exports = {
 
@@ -38,6 +40,31 @@ module.exports = {
 
             // Redirecionamento
             return res.redirect('/')
+        }
+
+        catch {
+            console.log(error)
+            return res.send("Erro no Banco de Dados")
+        }
+    },
+
+    async buyProduct(req, res) {
+        const fields = req.body;
+        console.log(fields)
+
+        try {
+
+            // Salvar um usuário
+            const db = await Database;
+            await buyProduct(db, {
+                total: fields.total,
+                qnt: fields.quantidade,
+                id: fields.id
+            })
+
+
+            // Redirecionamento
+            return res.redirect('/produtos')
         }
 
         catch {
@@ -120,9 +147,6 @@ module.exports = {
         const db = await Database;
         const results = await db.all(`SELECT * FROM products WHERE prod_id =${id}`)
         const miniatura = results[0]
-
-        console.log(miniatura)
-
 
         return res.render('cart', { miniatura })
 

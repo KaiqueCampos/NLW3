@@ -27,6 +27,7 @@ server
     .get('/register', pages.register)
     .post('/login-Validation', pages.loginValidation)
     .post('/register-user', pages.registerUser)
+    .post('/buy-products', pages.buyProduct)
 
 
 // Ligar o server

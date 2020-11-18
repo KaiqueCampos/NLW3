@@ -27,8 +27,31 @@ function execute(db) {
             user_cidade TEXT,
             user_uf TEXT
         );
+
+        CREATE TABLE IF NOT EXISTS compras (
+            buy_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            buy_total DECIMAL(10,2),
+            buy_quantidade INTEGER,
+            prod_id INTEGER,
+            FOREIGN KEY (prod_id) REFERENCES products(prod_id)
+        )
     `)
 }
+
+// function execute(db) {
+//     return db.run(`
+//     INSERT INTO compras (
+//         buy_total,
+//         buy_quantidade,
+//         prod_id
+//     )VALUES (
+//         7000,
+//         4,
+//         1
+//     );
+// `);
+// }
+
 
 // function execute(db) {
 //     return db.run(`
@@ -36,12 +59,14 @@ function execute(db) {
 //         prod_name,
 //         prod_image,
 //         prod_price,
-//         prod_colection
+//         prod_colection,
+//         prod_category
 //     )VALUES (
-//         'Lycan Hypersport',
-//         "https://www.pontofrio-imagens.com.br/Control/ArquivoExibir.aspx?IdArquivo=1237587616",
-//         1500,
-//         'Fast and Furious'
+//         "BatMovel",
+//         "https://www.minimundi.com.br/cdn/imagens/produtos/det/67549.jpg",
+//         2500,
+//         'Commic',
+//         'Commic'
 //     );
 // `);
 // }

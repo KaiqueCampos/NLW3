@@ -101,6 +101,7 @@ hr {
 }
 
 .inCart {
+    visibility: hidden;
     background: rgb(105, 105, 105);
     position: absolute;
     right: 0.1px;
@@ -160,4 +161,18 @@ hr {
 
 .setCart:hover {
     opacity: 70%;
+}
+
+/* FOrm */
+.inputHidden{
+    visibility: hidden;
+}
+
+.btn-buy{
+    position: absolute;
+    right: 2vw;
+    display: block;
+    background: red;
+    width: 3vw;
+    height: 3vw;
 }
