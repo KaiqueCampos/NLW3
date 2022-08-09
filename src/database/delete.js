@@ -10,6 +10,5 @@ Database.then(async db => {
 
     // Consultar dados na tabela   
     const selectedOrphanages = await db.all("SELECT * FROM orphanages")
-    console.log(selectedOrphanages)
 
 })

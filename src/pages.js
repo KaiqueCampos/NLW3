@@ -10,7 +10,6 @@ module.exports = {
 
     async orphanage(req, res) {
         const id = req.query.id
-        console.log(id)
 
         try {
 
